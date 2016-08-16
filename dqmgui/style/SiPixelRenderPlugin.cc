@@ -27,9 +27,9 @@ class SiPixelRenderPlugin : public DQMRenderPlugin
 public:
   virtual bool applies( const VisDQMObject &o, const VisDQMImgInfo & )
     {
-      if( o.name.find( "Pixel/" ) != std::string::npos )
+      if( o.name.find( "Pixel/" ) == 0 )
         return true;
-      if( o.name.find( "PixelPhase1/" ) != std::string::npos )
+      if( o.name.find( "PixelPhase1/" ) == 0 )
         return true;
 
       return false;
